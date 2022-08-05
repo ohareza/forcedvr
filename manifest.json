@@ -18,6 +18,7 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
+    "activeTab",
     "https://www.youtube.com/watch?*"
   ],
 

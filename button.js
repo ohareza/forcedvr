@@ -7,7 +7,15 @@ function toggleStatus() {
       log("Setting enableDvr to " + c.enableDvr);
       setConfig(c).then(() => {
         setBadgeState(c.enableDvr);
-        browser.tabs.reload();
+
+        browser.tabs
+          .query({ currentWindow: true, active: true })
+          .then((tabs) => {
+            let tab = tabs[0];
+            if (tab.url.startsWith("https://www.youtube.com/watch?")) {
+              browser.tabs.reload(tab.id);
+            }
+          }, console.error);
       });
     },
     (error) => {
