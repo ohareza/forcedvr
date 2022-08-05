@@ -14,6 +14,23 @@ Force enable YouTube DVR require those permissions:
 
 * activeTab: Refresh watch page on enable toggle
 
-* webRequest, webRequestBlocking, _all_urls_: [Patch response body to enable DVR](/patch.js)
+* webRequest, webRequestBlocking, _all_urls_: [Patch response body to enable DVR](/src/patch.js)
 
 * storage: save configuration
+
+## Hacking
+
+Tools:
+- `npm install -g web-ext`
+
+```
+make build
+     run
+```
+
+### Tests
+
+<https://www.youtube.com/c/TheGoodLiferadio>
+
+- DVR is working when navigating from other page
+- DVR is working when opening directly
