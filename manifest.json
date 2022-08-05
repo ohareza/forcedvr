@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Force enable YouTube DVR",
-  "version": "0.1.1",
+  "version": "0.2",
 
   "description": "Enables the YouTube DVR on all streams",
 
