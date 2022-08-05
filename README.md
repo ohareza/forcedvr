@@ -1,14 +1,16 @@
-# ForceDVR
+# Force enable YouTube DVR
+
+![Logo](enabled.svg)
 
 Enables the YouTube DVR on all streams.
 
 ## Get this extension
 
-![Firefox Logo](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/42.8.0/firefox/firefox_16x16.png) [Mozilla Add-on](https://addons.mozilla.org/en-US/firefox/addon/forcedvr/).
+![Firefox Logo](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/42.8.0/firefox/firefox_16x16.png) [Mozilla Add-on](https://addons.mozilla.org/en-US/firefox/addon/force-enable-youtube-dvr/).
 
 ## About Permissions
 
-ForceDVR require those permissions:
+Force enable YouTube DVR require those permissions:
 
 * activeTab: Refresh watch page on enable toggle
 
