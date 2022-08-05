@@ -36,6 +36,12 @@ function patch(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   patch,
-  { urls: ["https://www.youtube.com/watch?*"], types: ["main_frame"] },
+  {
+    urls: [
+      "https://www.youtube.com/watch?*",
+      "https://www.youtube.com/youtubei/v1/player?*",
+    ],
+    types: ["main_frame", "xmlhttprequest"],
+  },
   ["blocking"]
 );
