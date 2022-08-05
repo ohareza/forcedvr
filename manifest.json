@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Force enable YouTube seekbar",
+  "version": "0.1",
+
+  "description": "Enables the YouTube seekbar on all streams",
+
+  "icons": {
+    "32": "enabled.svg"
+  },
+
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.youtube.com/watch?*"
+  ],
+
+  "browser_specific_settings": {
+    "gecko": { 
+      "id": "forcedvr@ohareza.twt",
+      "strict_min_version": "79.0"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "32": "disabled.svg"
+    }
+  }
+}
