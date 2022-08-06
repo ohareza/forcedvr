@@ -40,6 +40,7 @@ browser.webRequest.onBeforeRequest.addListener(
     urls: [
       "https://www.youtube.com/watch?*",
       "https://www.youtube.com/youtubei/v1/player?*",
+      "https://www.youtube.com/c/*/live",
     ],
     types: ["main_frame", "xmlhttprequest"],
   },
