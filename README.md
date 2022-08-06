@@ -1,6 +1,6 @@
-# Force enable YouTube DVR
+# ![Logo](src/enabled.svg) Force enable YouTube DVR
 
-![Logo](src/enabled.svg)
+
 
 Enables the YouTube DVR on all streams.
 
