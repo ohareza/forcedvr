@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Force enable YouTube DVR",
-  "version": "0.3",
+  "version": "0.4",
 
   "description": "Enables the YouTube DVR on all streams",
 
@@ -20,7 +20,8 @@
     "webRequestBlocking",
     "activeTab",
     "https://www.youtube.com/watch?*",
-    "https://www.youtube.com/youtubei/v1/player?*"
+    "https://www.youtube.com/youtubei/v1/player?*",
+    "https://www.youtube.com/c/*/live"
   ],
 
   "browser_specific_settings": {

@@ -30,7 +30,21 @@ make build
 
 ### Tests
 
-<https://www.youtube.com/c/TheGoodLiferadio>
-
-- DVR is working when navigating from other page
 - DVR is working when opening directly
+  - <https://www.youtube.com/watch?v=36YnV9STBqc>
+  - <https://youtu.be/36YnV9STBqc>
+- DVR is working when navigating from other page
+  - <https://www.youtube.com/c/TheGoodLiferadio>
+- DVR is working when opening from channel live link
+  - <https://www.youtube.com/c/TheGoodLiferadio/live>
+- DVR is working on embeds
+  - <https://twitchtheater.tv/v=36YnV9STBqc>
+
+## Changelog
+
+```txt
+0.4: Fix channel live links
+0.3: Fix navigation from other pages & embeds
+0.2: Bump version so we can publish in AMO
+0.1: Initial
+```
