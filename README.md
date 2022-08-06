@@ -1,6 +1,6 @@
 # Force enable YouTube DVR
 
-![Logo](enabled.svg)
+![Logo](src/enabled.svg)
 
 Enables the YouTube DVR on all streams.
 
@@ -14,7 +14,7 @@ Force enable YouTube DVR require those permissions:
 
 * activeTab: Refresh watch page on enable toggle
 
-* webRequest, webRequestBlocking, _all_urls_: [Patch response body to enable DVR](/src/patch.js)
+* webRequest, webRequestBlocking, _www.youtube.com_: [Patch response body to enable DVR](/src/patch.js)
 
 * storage: save configuration
 
