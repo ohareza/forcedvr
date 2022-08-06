@@ -45,6 +45,6 @@ make build
 ```txt
 0.4: Fix channel live links
 0.3: Fix navigation from other pages & embeds
-0.2: Bump version so we can publish in AMO
+0.2: Make toggle only refresh if on YouTube watch page
 0.1: Initial
 ```
