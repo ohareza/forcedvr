@@ -44,6 +44,7 @@ make build
 ## Changelog
 
 ```txt
+0.5: Don't filter requests when patching is disabled
 0.4: Fix channel live links
 0.3: Fix navigation from other pages & embeds
 0.2: Make toggle only refresh if on YouTube watch page

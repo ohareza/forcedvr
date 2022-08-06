@@ -1,4 +1,4 @@
-const debug = true;
+const debug = false;
 
 function logContext(context) {
   return function (message) {

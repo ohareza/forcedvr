@@ -12,8 +12,12 @@ browser.storage.sync.onChanged.addListener((changes) => {
 
 function patch(details) {
   const log = logContext("patch");
+  if (!enableDvr) {
+    log(`Not patching ${details.url} because DVR is disabled`);
+    return {};
+  }
 
-  log("Patching " + details.url);
+  log(`Patching ${details.url}`);
 
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
@@ -21,10 +25,7 @@ function patch(details) {
 
   filter.ondata = (event) => {
     let str = decoder.decode(event.data, { stream: true });
-    str = str.replace(
-      /"isLiveDvrEnabled":false/g,
-      '"isLiveDvrEnabled":' + enableDvr
-    );
+    str = str.replace(/"isLiveDvrEnabled":false/g, '"isLiveDvrEnabled":true');
     filter.write(encoder.encode(str));
   };
   filter.onstop = (event) => {

@@ -14,7 +14,7 @@ deploy: lint
 	web-ext sign \
 		--api-key=$$(cat secrets/api-key) \
 		--api-secret=$$(cat secrets/api-secret) \
-		--channel=listed \
+		--channel=unlisted \
 		--source-dir=${PWD}/src/ \
 		--ignore-files='test/** README.md'
 
