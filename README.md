@@ -9,6 +9,9 @@ Enables the YouTube DVR on all streams.
 ![Firefox Logo](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/42.8.0/firefox/firefox_16x16.png) [(0.5) Mozilla Add-on](https://addons.mozilla.org/en-US/firefox/addon/force-enable-youtube-dvr/).  
 ![Firefox Logo](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/42.8.0/firefox/firefox_16x16.png) [(0.5) Install from Github (Not auto updating)](https://github.com/ohareza/forcedvr/releases/latest/download/extension.xpi).  
 
+## Chrome version
+
+Experimental chrome version available at [/chrome](/chrome)
 
 ## About Permissions
 
