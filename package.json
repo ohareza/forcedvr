@@ -1,0 +1,23 @@
+{
+  "name": "forcedvr",
+  "version": "1.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "build": "node scripts/build.js",
+    "lint": "npm run build && web-ext lint --source-dir dist/firefox --warnings-as-errors",
+    "package": "npm run lint && web-ext build --source-dir dist/firefox --artifacts-dir dist --filename forcedvr-firefox-{version}.zip --overwrite-dest && web-ext build --source-dir dist/chrome --artifacts-dir dist --filename forcedvr-chrome-{version}.zip --overwrite-dest",
+    "check": "npm test && npm run lint && npm run test:browser",
+    "verify:live": "npm run build && node scripts/verify-live.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "web-ext": "10.7.0"
+  }
+}

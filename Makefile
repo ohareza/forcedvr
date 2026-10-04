@@ -1,21 +1,16 @@
-run:
-	web-ext run \
-		--firefox-profile default-release \
-		--source-dir=${PWD}/src/ \
-		--ignore-files='test/** README.md'
+.PHONY: test lint build run package
+
+test:
+	npm test
 
 lint:
-	web-ext lint --warnings-as-errors --source-dir=${PWD}/src/ --ignore-files='test/** README.md'
+	npm run lint
 
-build: lint
-	web-ext build --overwrite-dest --source-dir=${PWD}/src/ --ignore-files='test/** README.md'
+build:
+	npm run build
 
-deploy: lint
-	web-ext sign \
-		--api-key=$$(cat secrets/api-key) \
-		--api-secret=$$(cat secrets/api-secret) \
-		--channel=listed \
-		--source-dir=${PWD}/src/ \
-		--ignore-files='test/** README.md'
+run: build
+	npm exec -- web-ext run --source-dir dist/firefox
 
-.PHONY: run lint build deploy
+package:
+	npm run package

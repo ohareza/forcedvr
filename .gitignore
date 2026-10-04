@@ -1,2 +1,8 @@
-web-ext-artifacts
-test
+web-ext-artifacts/
+secrets/
+node_modules/
+dist/
+test-results/
+playwright-report/
+legacy-artifacts/
+.DS_Store

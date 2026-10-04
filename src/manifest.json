@@ -1,39 +1,30 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Force enable YouTube DVR",
-  "version": "0.5",
-
-  "description": "Enables the YouTube DVR on all streams",
-
+  "version": "1.1.0",
+  "description": "Enable rewind on YouTube live streams when past segments are available.",
+  "minimum_chrome_version": "102",
   "icons": {
-    "32": "enabled.svg"
+    "48": "enabled.png",
+    "128": "icon.png"
   },
-
   "background": {
-    "page": "background.html",
-    "persistent": false
+    "service_worker": "background.js"
   },
-
   "permissions": [
     "storage",
-    "webRequest",
-    "webRequestBlocking",
-    "activeTab",
-    "https://www.youtube.com/watch?*",
-    "https://www.youtube.com/youtubei/v1/player?*",
-    "https://www.youtube.com/c/*/live"
+    "scripting",
+    "activeTab"
   ],
-
-  "browser_specific_settings": {
-    "gecko": { 
-      "id": "forcedvr@ohareza.twt",
-      "strict_min_version": "79.0"
-    }
-  },
-
-  "browser_action": {
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://www.youtube-nocookie.com/*"
+  ],
+  "action": {
+    "default_title": "Force DVR (click to toggle)",
     "default_icon": {
-      "32": "disabled.svg"
+      "48": "enabled.png"
     }
   }
 }
